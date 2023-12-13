@@ -1,17 +1,17 @@
 
 const sortArr = (arrRaw)=>{
-    let valueFull = 0;
+    let bufferArr = [];
     let bufferNumber = 0;
+    
     arrRaw.forEach((item,index)=>{
         for (let key in item){
             if (item[key] !== '' && item[key] !== null) {
                 bufferNumber += 1;
             }
         }
-        if (bufferNumber>valueFull && index !== 0){
-        [arrRaw[index],arrRaw[index-1]] = [arrRaw[index-1], arrRaw[index]];
-        }else valueFull = bufferNumber;
+        bufferArr.push([bufferNumber,index])
         bufferNumber = 0;
     })
-    return arrRaw
+    bufferArr.sort((a,b)=>b[0]-a[0])
+    return arrRaw = bufferArr.map(index => arrRaw[index[1]]);
 }
