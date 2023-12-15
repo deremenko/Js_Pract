@@ -1,14 +1,14 @@
 
 const sortElements = (arr, direction) => {
   switch (direction) {
-    case '<': 
+    case 'asc': 
       arr.sort((a,b)=>{
-        return a-b;
+        return a - b;
       })
       break;
-    case '>':
+    case 'desc':
       arr.sort((a,b)=>{
-        return b-a;
+        return b - a;
       })
       break;
   }
