@@ -1,4 +1,4 @@
-const validationString = (str)=>{
-    str = new Set(str.split(''));
-    return [...str].join('')==='abc'?true:false;
-}
+const validateString = (inputString) => {
+  const uniqueChars = new Set(inputString.split(''));
+  return ['a', 'b', 'c'].every(char => uniqueChars.has(char));
+};
