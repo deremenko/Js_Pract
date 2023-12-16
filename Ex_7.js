@@ -1,6 +1,6 @@
 
 const sortArr = (arrRaw) => {
-  let bufferArr = [];
+  const bufferArr = [];
   let bufferNumber = 0;
 
   arrRaw.forEach((item, index) => {
