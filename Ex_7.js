@@ -9,7 +9,9 @@ const sortArr = (arrRaw) => {
         bufferNumber += 1;
       }
     }
-    if (bufferNumber > 0) bufferArr.push([bufferNumber, index]);
+    if (bufferNumber > 0) {
+      bufferArr.push([bufferNumber, index]);
+    } 
     bufferNumber = 0;
   });
   bufferArr.sort((a, b) => b[0] - a[0]);
