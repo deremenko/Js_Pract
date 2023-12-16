@@ -1,11 +1,12 @@
-const cutUrl = (str)=>{
-    let returnObject = {}
-    str = str.replace(/^https:\/\/underscorejs\.org\?/,'').split(/[=&;]/);
-    for (var i = 0; i < str.length; i += 2) {
-        let key = str[i];
-        let value = str[i + 1];
-        returnObject[key] = value;
-    }
-    return returnObject
-    
-}
+const parseUrlParameters = (url) => {
+  const returnObject = {};
+  const urlParameters = url.replace(/^https:\/\/underscorejs\.org\?/, '').split(/[=&;]/);
+
+  for (let i = 0; i < urlParameters.length; i += 2) {
+    const key = urlParameters[i];
+    const value = urlParameters[i + 1];
+    returnObject[key] = value;
+  }
+
+  return returnObject;
+};
