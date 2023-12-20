@@ -5,13 +5,17 @@ const sortArr = (arrRaw) => {
 
   arrRaw.forEach((item, index) => {
     for (let key in item) {
-      if (item[key] !== '' && item[key] !== null) {
+
+      if (item[key] !== '' && item[key] !== null && item[key]!== undefined) {
         bufferNumber += 1;
-      }
+      } 
+
     }
+
     if (bufferNumber > 0) {
       bufferArr.push([bufferNumber, index]);
     } 
+    
     bufferNumber = 0;
   });
   bufferArr.sort((a, b) => b[0] - a[0]);
