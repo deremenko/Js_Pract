@@ -18,8 +18,8 @@ const sortArr = (arrRaw) => {
     
     bufferNumber = 0;
   });
-  bufferArr.sort((a, b) => b[0] - a[0]);
 
+  bufferArr.sort((a, b) => b[0] - a[0]);
   return arrRaw = bufferArr.map((index) => arrRaw[index[1]]);
 };
 
